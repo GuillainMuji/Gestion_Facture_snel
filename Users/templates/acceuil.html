@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand btn btn-outline-success" href="">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="navbar-brand btn btn-outline-success" href="#">Acceuil <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="navbar-brand btn btn-outline-success" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle btn-outline-success" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categories_client
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled btn btn-outline-success " href="#">Disabled</a>
+                        </li>
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </nav>
+            </div>
+        </div> <br>
+        {%block content%}
+        {%endblock%}
+        <div class="pricing-container">
+            <div class="pricing-plan basic">
+                <h2>Residentiel Custumer </h2>
+                <p class="price">100 CDF</p>
+                <p class="duration">Only for first month</p>
+                <ul>
+                    <li>Limited Access Library</li>
+                    <li>Single User</li>
+                    <li>eCommerce Store</li>
+                    <li>Hotline Support 24/7</li>
+                    <li>No Updates</li>
+                </ul>
+                <a href="#" class="button">Get Started</a>
+            </div>
+            <div class="pricing-plan standard">
+                <h2>Commercial Custumer </h2>
+                <p class="price">$16.97</p>
+                <p class="duration">Only for first month</p>
+                <ul>
+                    <li>Limited Access Library</li>
+                    <li>Single User</li>
+                    <li>eCommerce Store</li>
+                    <li>Hotline Support 24/7</li>
+                    <li>No Updates</li>
+                </ul>
+                <a href="{% url 'facture_liste' %}" class="button">Get Started</a>
+            </div>
+            <div class="pricing-plan premium">
+                <h2> Industriel Custumer </h2>
+                <p class="price">$29.45</p>
+                <p class="duration">Only for first month</p>
+                <ul>
+                    <li>Limited Access Library</li>
+                    <li>Single User</li>
+                    <li>eCommerce Store</li>
+                    <li>Hotline Support 24/7</li>
+                    <li>No Updates</li>
+                </ul>
+                <a href="#" class="button">Get Started</a>
+            </div>
+        </div> <br>
+        <footerc class="align-items-center">
+            <p>&copy; 2024 SNEL. Tous droits réservés.</p>
+        </footer>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing-plan {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 19px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 10px;
+}
+
+.pricing-plan h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.pricing-plan .price {
+    font-size: 32px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.pricing-plan .duration {
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.pricing-plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.pricing-plan ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.pricing-plan ul li:last-child {
+    border-bottom: none;
+}
+
+.pricing-plan .button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.pricing-plan .button:hover {
+    background-color: #0056b3;
+}
+
+.basic .price {
+    color: red;
+}
+
+.standard .price {
+    color: purple;
+}
+
+.premium .price {
+    color: green;
+}
+
+    </style>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {%block content%}
+        {%endblock%}
+            <div class="pricing-plan standard">
+                <h3>chers client merci d'avoir payer la facture </h3>
+                <p class="price">CDF 16.97</p>
+                <p class="duration">Only for first month</p>
+                <ul>
+                    <li>Limited Access Library</li>
+                    <li>Single User</li>
+                    <li>eCommerce Store</li>
+                    <li>Hotline Support 24/7</li>
+                    <li>No Updates</li>
+                </ul>
+                <a href="#" class="button">Connexion</a>
+               
+            </div>
+            <br>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing-plan {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 19px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 10px;
+}
+
+.pricing-plan h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.pricing-plan .price {
+    font-size: 32px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.pricing-plan .duration {
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.pricing-plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.pricing-plan ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.pricing-plan ul li:last-child {
+    border-bottom: none;
+}
+
+.pricing-plan .button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.pricing-plan .button:hover {
+    background-color: #0056b3;
+}
+
+.basic .price {
+    color: red;
+}
+
+.standard .price {
+    color: purple;
+}
+
+.premium .price {
+    color: green;
+}
+
+    </style>
+</body>
+</html>
